@@ -24,22 +24,9 @@ const users: User[] = [
   { id: 20, name: 'Tina White', email: 'tina.white@example.com', role: 'admin' },
 ]
 
-function randomDelay(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
-
-export async function fetchUsers(query: string): Promise<User[]> {
-  const delay = randomDelay(200, 600)
-  await new Promise((resolve) => setTimeout(resolve, delay))
-
-  const lower = query.toLowerCase()
-  if (!lower) return users
-
-  return users.filter(
-    (u) =>
-      u.name.toLowerCase().includes(lower) ||
-      u.email.toLowerCase().includes(lower),
-  )
+export async function fetchUsers(): Promise<User[]> {
+  await new Promise((resolve) => setTimeout(resolve, 400))
+  return users
 }
 
 const statuses: Order['status'][] = ['pending', 'shipped', 'delivered', 'cancelled']

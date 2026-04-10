@@ -91,50 +91,83 @@ tr:hover td {
   background: #f5f5f5;
 }
 
-/* User list */
-.user-search {
+/* User directory */
+.user-directory {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.user-search input {
-  width: 100%;
-  max-width: 400px;
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
 }
 
-.user-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.user-list li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #eee;
+/* User card */
+.user-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
 }
 
-.user-list .user-info {
+.user-card-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.user-card-info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
-.user-list .user-name {
+.user-card-name {
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
-.user-list .user-email {
-  font-size: 0.85rem;
-  color: #888;
-}
-
-.user-list .user-role {
+.user-card-email {
   font-size: 0.8rem;
-  padding: 0.2rem 0.6rem;
+  color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-card-role {
+  margin-left: auto;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
   border-radius: 999px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.role-admin {
+  background: #e8d5f5;
+  color: #6b21a8;
+}
+
+.role-manager {
+  background: #d5e8f5;
+  color: #1e40af;
+}
+
+.role-user {
   background: #eee;
   color: #555;
 }

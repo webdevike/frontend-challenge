@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { UserSearchList } from './challenge-1/UserSearchList'
+import { UserDirectory } from './challenge-1/UserDirectory'
 import { OrderDashboard } from './challenge-2/OrderDashboard'
 
 type Tab = 'challenge-1' | 'challenge-2'
@@ -14,7 +14,7 @@ function App() {
           className={activeTab === 'challenge-1' ? 'tab active' : 'tab'}
           onClick={() => setActiveTab('challenge-1')}
         >
-          Challenge 1: User Search
+          Challenge 1: User Directory
         </button>
         <button
           className={activeTab === 'challenge-2' ? 'tab active' : 'tab'}
@@ -24,7 +24,7 @@ function App() {
         </button>
       </nav>
       <main className="content">
-        {activeTab === 'challenge-1' ? <UserSearchList /> : <OrderDashboard />}
+        {activeTab === 'challenge-1' ? <UserDirectory /> : <OrderDashboard />}
       </main>
     </div>
   )

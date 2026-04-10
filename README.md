@@ -11,18 +11,11 @@ npm run dev
 
 This also works in [StackBlitz](https://stackblitz.com) — just import the repo.
 
-## Part 1 — Feature Addition
+## Part 1 — Build a Feature
 
-Open `src/challenge-1/UserSearchList.tsx`.
+Open `src/challenge-1/UserDirectory.tsx`.
 
-This component renders a search input and a list of users. Right now it fires a request on every keystroke and has some rough edges. Your job:
-
-1. Add debouncing so we're not making a request on every keystroke.
-2. Add a loading indicator while results are being fetched.
-3. Add basic error handling (the mock API doesn't error today, but it should be handled gracefully).
-4. Make sure that if results come back out of order, the UI always shows results for the most recent query — not a stale one.
-
-You can add files, extract hooks, restructure however you see fit.
+A `UserCard` component and a `fetchUsers` API function are already provided. Your job is to build out the `UserDirectory` component so it fetches the list of users and renders them using `UserCard`.
 
 ## Part 2 — Refactor
 
