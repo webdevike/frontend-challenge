@@ -1,0 +1,4 @@
+node_modules
+dist
+.vite
+EVALUATOR_NOTES.md
