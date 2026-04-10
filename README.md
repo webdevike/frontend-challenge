@@ -1,6 +1,6 @@
-# Frontend Take-Home Challenge
+# Frontend Coding Interview
 
-This take-home has two parts. Budget around 90 minutes total, but spend more if you want to. We care more about how you think than about completeness.
+This session has two parts. Your interviewer will walk you through each one.
 
 ## Setup
 
@@ -11,7 +11,7 @@ npm run dev
 
 This also works in [StackBlitz](https://stackblitz.com) — just import the repo.
 
-## Part 1 — Feature Addition (~30–45 min)
+## Part 1 — Feature Addition
 
 Open `src/challenge-1/UserSearchList.tsx`.
 
@@ -22,24 +22,14 @@ This component renders a search input and a list of users. Right now it fires a 
 3. Add basic error handling (the mock API doesn't error today, but it should be handled gracefully).
 4. Make sure that if results come back out of order, the UI always shows results for the most recent query — not a stale one.
 
-You can add files, extract hooks, restructure however you see fit. There's no single "right" approach — just make it solid.
+You can add files, extract hooks, restructure however you see fit.
 
-## Part 2 — Refactor (~45–60 min)
+## Part 2 — Refactor
 
 Open `src/challenge-2/OrderDashboard.tsx`.
 
 This component works — filters filter, sorts sort, pagination paginates. But it's grown organically and could use some cleanup. Refactor it however you think is best.
 
-Two constraints:
-1. **Preserve behavior.** Everything that works today should still work after your refactor.
-2. **Be prepared to explain your choices.** We'll discuss your approach in the follow-up.
+One constraint: **preserve behavior.** Everything that works today should still work after your refactor.
 
-Please add a short `REFACTOR_NOTES.md` in the project root explaining what you changed and why.
-
-## Submission
-
-Push to a GitHub repo and share the link, or zip and email it.
-
-## What We're Looking For
-
-Judgment, not line count. Clean diffs. Reasoning over cleverness.
+Think out loud — we're interested in how you prioritize and what you notice.
